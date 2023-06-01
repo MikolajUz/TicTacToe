@@ -47,4 +47,116 @@ table {
 	border-spacing: 0;
 }
 
+:root{
+    --sidebar-color: rgb(143, 143, 252);
+    --header-color: rgb(247, 244, 244);
+    --maincontent-color: rgb(226, 216, 216);
+    --maincontent-tile-shadow:rgb(38, 57, 77) 0px 20px 30px -10px;
+    --fontfamily: 'Prompt', sans-serif;
+}
+
+container{
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+}
+h1{
+	padding: 3rem;
+	font-family: var(--fontfamily);
+	font-size: 5rem;
+}
+middle{
+	display: flex;
+	justify-content: center;
+	gap:1rem;
+}
+column{
+	display: flex;
+	flex-direction: column;
+	gap:1rem;
+}
+.flex{
+	display: flex;
+	gap:1rem;
+	justify-content: center;
+}
+
+
+#board{
+	
+	display: flex;
+	
+}
+
+.button{
+	align-items: center;
+  background-color: rgba(240, 240, 240, 0.26);
+  border: 1px solid #DFDFDF;
+  border-radius: 16px;
+  box-sizing: border-box;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter, sans-serif;
+  font-size: 18px;
+  justify-content: center;
+  line-height: 28px;
+  max-width: 100%;
+  padding: 14px 22px;
+  text-decoration: none;
+  transition: all .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 10rem;
+}
+input{
+  width: 7rem;
+  border-radius: 16px;
+  font-size: 18px;
+  border: 1px solid #DFDFDF;
+  padding: 14px 22px;
+}
+
+column>div:nth-child(3){
+	height:10rem;
+	font-size: 8rem;
+	border-radius: 70%;
+}
+
+.button:active,
+.button:hover {
+  outline: #000000;
+}
+.button:active{
+transform: translateY(3px);
+
+}
+
+.button:hover {
+  background-color: #FFFFFF;
+  border-color: rgba(0, 0, 0, 0.19);
+}
+
+@media (min-width: 768px) {
+  .button {
+    font-size: 20px;
+    
+    padding: 14px 16px;
+  }
+}
+
+.field{
+	width:10rem;
+	height:10rem;
+	border: 1px solid black;
+}
+
+#field0,#field1,#field3, #field4,#field6, #field7{
+	border-bottom: none;
+}
+#field3,#field4,#field5{
+	border-left: none;
+	border-right: none;
+}
 
