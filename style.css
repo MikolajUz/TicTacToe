@@ -30,6 +30,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
+	cursor: url("smiley.png"), auto;
 }
 ol, ul {
 	list-style: none;
@@ -53,6 +54,8 @@ table {
     --maincontent-color: rgb(226, 216, 216);
     --maincontent-tile-shadow:rgb(38, 57, 77) 0px 20px 30px -10px;
     --fontfamily: 'Prompt', sans-serif;
+	--mark1 :url("smiley.png");
+	--mark2 :url("avatar.png");
 }
 
 container{
@@ -146,11 +149,34 @@ transform: translateY(3px);
   }
 }
 
-.field{
+.fieldX, .field0, .fieldMarkX, .fieldMark0 {
 	width:10rem;
 	height:10rem;
 	border: 1px solid black;
+	display:flex;
+	justify-content:center;
+	align-items: center;
 }
+.fieldMarkX{
+	background-image: var(--mark1) ;
+	background-size: contain;
+}
+.fieldMark0{
+	background-image: var(--mark2) ;
+	background-size: contain;
+}
+
+.fieldX:hover{
+	background-image: var(--mark1) ;
+	background-size: contain;
+	
+}
+.field0:hover{
+	background-image: var(--mark2) ;
+	background-size: contain;
+	
+}
+
 
 #field0,#field1,#field3, #field4,#field6, #field7{
 	border-bottom: none;
@@ -160,3 +186,10 @@ transform: translateY(3px);
 	border-right: none;
 }
 
+.pointed{
+	width: 7px;
+	height: 7px;
+	background-color: white;
+	border-radius: 50%;
+	margin-bottom: 20rem;
+  }

@@ -50,9 +50,11 @@ function resetF(){
 }
 
 const GameBoard = (()=>{
-    //const board = new Array(9);
-    const 
-    const board = [0,1,2,3,4,5,6,7,8];
+    const board = ['','','','','','','','',''];
+
+    
+
+
     return board;
 
   })();
@@ -82,15 +84,48 @@ function createBaord(){
             for(i=0;i<3;i++){
             let field=document.createElement('div');
             field.setAttribute('id',`field${idCount++}`);
-            field.classList.add('field');
-            
-
+            field.addEventListener('click',Mark);
+            field.classList.add('fieldX');
             fieldRow.appendChild(field);
             }
         }
 }
+function Mark(){
+    
+    let field=document.querySelectorAll('#board>div>div');
+       
+        if(this.classList.contains('fieldX')){
+            this.classList.add('fieldMarkX');
+            this.classList.remove('fieldX');
+            GameBoard[this.getAttribute('id').slice(-1)]='1';
+                
+                field.forEach(elem=>{
+                    if(GameBoard[elem.getAttribute('id').slice(-1)]===''){
+                    elem.classList.remove('fieldX')
+                    elem.classList.add('field0')
+                    }
+                    })
+            }   
+            
+        if(this.classList.contains('field0')){
+            this.classList.add('fieldMark0');
+            this.classList.remove('fieldX');
+            GameBoard[this.getAttribute('id').slice(-1)]='0';
+        
+
+                field.forEach(elem=>{
+                    if(GameBoard[elem.getAttribute('id').slice(-1)]===''){
+                    elem.classList.remove('field0')
+                    elem.classList.add('fieldX')
+                    }
+                    }) 
+        }
+        
+   }
 
 
+
+GameBoard
 createBaord();
 
 
@@ -100,3 +135,8 @@ createBaord();
 
   //gameBoard[1]=3;
   //console.log(gameBoard)
+
+
+
+
+  
