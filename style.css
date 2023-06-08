@@ -1,6 +1,8 @@
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
+
+   <a href="https://iconscout.com/icons/o" target="_blank">Free O Icon</a> by <a href="https://iconscout.com/contributors/mcgandhi61" target="_blank">Mohit Gandhi</a>
 */
 
 html, body, div, span, applet, object, iframe,
@@ -30,7 +32,7 @@ footer, header, hgroup, menu, nav, section {
 }
 body {
 	line-height: 1;
-	cursor: url("smiley.png"), auto;
+
 }
 ol, ul {
 	list-style: none;
@@ -54,8 +56,8 @@ table {
     --maincontent-color: rgb(226, 216, 216);
     --maincontent-tile-shadow:rgb(38, 57, 77) 0px 20px 30px -10px;
     --fontfamily: 'Prompt', sans-serif;
-	--mark1 :url("smiley.png");
-	--mark2 :url("avatar.png");
+	--mark1 :url("X.png");
+	--mark2 :url("o.png");
 }
 
 container{
@@ -88,6 +90,9 @@ column{
 #board{
 	
 	display: flex;
+	width:30rem;
+	height:30rem;
+	background-color: var(--header-color);
 	
 }
 
@@ -141,6 +146,7 @@ transform: translateY(3px);
   border-color: rgba(0, 0, 0, 0.19);
 }
 
+
 @media (min-width: 768px) {
   .button {
     font-size: 20px;
@@ -193,3 +199,41 @@ transform: translateY(3px);
 	border-radius: 50%;
 	margin-bottom: 20rem;
   }
+
+.alertMessStyle{
+	opacity: 0.5;
+	
+  }
+
+
+.alertWindow{
+	background-color: rgb(182, 162, 162);
+	padding: 5rem;
+	border: 1px solid black;
+	border-radius: 2rem;
+	opacity: 0.9 ;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	margin: auto;
+	font-family: var(--fontfamily);
+	font-size: 5rem;
+	justify-content: center;
+	align-items: center;
+	display: flex;
+	height:20rem;
+	width:40rem;
+	word-wrap: break-word;
+    word-break: break-word;
+    overflow: scroll;
+    text-overflow: ellipsis;
+    -ms-overflow-style: none;  
+    scrollbar-width: none; 
+}
+
+.alertWindow::-webkit-scrollbar{
+    display: none;
+}
+
